@@ -36,12 +36,12 @@ jobs:
       - name: Deploy to AWS Staging Server
         uses: JimCronqvist/action-ssh@master
         with:
-          hosts: 'ubuntu@34.207.198.176'
+          hosts: 'ubuntu@51.21.132.115'
           privatekey: ${{secrets.EC2_STAGING_SERVER_SSH_ACCESS}}
           command: |
             export NVM_DIR=/home/ubuntu/.nvm
             source /home/ubuntu/.nvm/nvm.sh
-            cd /home/ubuntu/dev_ass_2/devop_testapp/
+            cd /home/ubuntu/Assignment2/vite-project/
             killall node
             git pull origin main
             echo "1"
